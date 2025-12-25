@@ -1,0 +1,15 @@
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { CounterProvider } from "./CounterContext";
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <CounterProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </CounterProvider>
+  </StrictMode>
+);
